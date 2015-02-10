@@ -1,0 +1,27 @@
+﻿body {
+}
+
+#pagesLinks {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 65px;
+    background-color: #191818;
+    color: white;
+    font:20px Arial, verdana;
+    /*margin: 20px;*/
+    padding: 0;
+}
+
+a, ul {
+    margin:0;
+    padding:10px;
+    list-style-type:none;
+    text-decoration:none;
+    float:left;
+    color:white;
+}
+
+    a:hover {
+        color:#f235fa;
+    }

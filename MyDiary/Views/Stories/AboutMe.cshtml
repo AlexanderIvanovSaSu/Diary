@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "AboutMe";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutMe</title>
+    <link href="~/Content/AboutMeCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="head">
+        <h1>About Me</h1>
+    </div>
+    <div>
+        <a href="@Url.Action("Index")" class="backbtn">Home</a>
+    </div>
+    <div class="box">
+        <img src="@Url.Content(@System.Configuration.ConfigurationManager.AppSettings["Image"])" alt="" />
+        <div class="info">
+            Name: <span>@System.Configuration.ConfigurationManager.AppSettings["AuthorName"]</span><br />
+            Info: <span>
+                @System.Configuration.ConfigurationManager.AppSettings["AuthorInfo"]
+            </span><br />
+            Bday: <span>@System.Configuration.ConfigurationManager.AppSettings["AuthorBirthday"]</span><br />
+            E-mail: <span>@System.Configuration.ConfigurationManager.AppSettings["Email"]</span>
+        </div>
+    </div>
+</body>
+</html>

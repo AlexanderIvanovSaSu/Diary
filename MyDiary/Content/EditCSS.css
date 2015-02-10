@@ -1,0 +1,114 @@
+﻿body#edit {
+    background: url(../Img/EditPage.jpg) no-repeat center center fixed;
+    color: aquamarine;
+    font: 20px arial, verdana;
+}
+
+body#delete {
+    background: url(../Img/DeletePage.jpg) no-repeat center center fixed;
+    color: aquamarine;
+    font: 20px arial, verdana;
+}
+
+.form-group {
+    position: relative;
+    margin: 20px 0;
+    padding: 0;
+    width: 400px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+input {
+    position: absolute;
+    margin: -10px 40px;
+    padding: 0;
+    top:0px;
+    left: 100px;
+    width: 400px;
+    height: 35px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font: 25px arial, verdana;
+    float: left;
+}
+
+    input:hover {
+        position: absolute;
+        margin: -10px 40px;
+        padding: 0;
+        left: 100px;
+        width: 400px;
+        height: 35px;
+        border: 2px solid #000000;
+        box-shadow: 0 0 15px #f5ff00;
+        border-radius: 5px;
+        font: 25px arial, verdana;
+        float: left;
+    }
+
+    input:focus {
+        position: absolute;
+        margin: -10px 40px;
+        padding: 0;
+        left: 100px;
+        width: 400px;
+        height: 35px;
+        border: 2px solid #000000;
+        box-shadow: 0 0 15px #ff0000;
+        border-radius: 5px;
+        font: 25px arial, verdana;
+        float: left;
+    }
+
+
+a {
+    text-decoration: none;
+}
+
+#id {
+    background-image: url(../Img/1smiling-gold-star.png);
+}
+
+input.btn btn-default {
+    top: 350px;
+    position: absolute;
+}
+
+.text-story {
+    position:relative;
+    margin:10px;
+    padding:0;
+    width:450px;
+    height:400px;
+    left:130px;
+}
+
+textarea {
+    width:400px;
+    height:200px;
+    box-shadow:0 0 15px aquamarine;
+    font:25px arial, verdana;
+    opacity:0.95;
+}
+
+    textarea:hover {
+        box-shadow:0 0 15px #f5ff00;
+    }
+    
+     textarea:focus {
+        box-shadow:0 0 15px #ff0000;
+    }
+
+#span-story {
+    position:absolute;
+}
+
+/*.backbtn {
+    width:200px;
+    content:url(../Img/BackButton-gray.png);
+}
+
+    .backbtn:hover {
+        content:url(../Img/BackButton.png)
+    }*/

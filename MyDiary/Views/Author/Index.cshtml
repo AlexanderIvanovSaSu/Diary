@@ -1,0 +1,10 @@
+﻿@using System.Configuration;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Author</h2>
+
+<div style="display:inline;">@ConfigurationManager.AppSettings["AuthorName"]</div>
+<div style ="display:inline;">@ConfigurationManager.AppSettings["AuthorInfo"]</div>

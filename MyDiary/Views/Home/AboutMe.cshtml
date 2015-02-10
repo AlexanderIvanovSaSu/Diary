@@ -1,0 +1,37 @@
+﻿@using System.Configuration;
+
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>About Me</title>
+    <meta />
+    <link href="~/Content/CSS.css" rel="stylesheet" />
+    <link href="~/Content/AboutMeCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav id="pagesLinks">
+            <ul>
+                <li>
+                    <a href="Index" title="Home/Stories">Home</a>
+                    <a href="NewStories" title="New Stories">Add New Stories</a>
+                    <a href="AboutMe" title="About Me">About Me</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>About Me</h1>
+    </header>
+    <div>
+        <h2>Name: @ConfigurationManager.AppSettings["AuthorName"]</h2>
+        <h3>Born: @ConfigurationManager.AppSettings["AuthorBirthday"]</h3>
+        <h4>Info: @ConfigurationManager.AppSettings["AuthorInfo"]</h4>
+        <img src="@Url.Content("~/Img/dubioza_kolektiv_df.jpg")" alt="AuthorInfo" style="width:150px; height:150px;" /><br />
+
+        <input type="button" id="buttonStory" value="Story" onclick="GoToStory()"/>
+    </div>
+
+    <script src="~/Scripts/JS.js"></script>
+</body>

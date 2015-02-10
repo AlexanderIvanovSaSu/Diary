@@ -1,0 +1,83 @@
+﻿@model MyDiary.Models.Story
+
+@{
+    //Layout = "";
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/StarsCSS.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/DDCSS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <div>
+            <a href="@Url.Action("Index")" class="backbtn"><img src="~/Img/Buttons/BackButton-gray.png" onmouseover="$('.backbtn img')[0].src = '../../Img/Buttons/BackButton-color.png'" onmouseout="$('.backbtn img')[0].src = '../../Img/Buttons/BackButton-gray.png'" style="width:200px;" /></a>
+        </div>
+        <hr />
+        <div class="container">
+            <div class="row">
+
+                <div class="detailStory">
+
+                    <div class="body">
+                        <img src="@Url.Action("RenderPhoto", "Stories", new { imageId = Model.ID })" class="story-img" />
+                    </div>
+
+                    <div class="body">
+                        @Html.DisplayFor(model => model.Story_Name)
+                    </div>
+
+                    <div class="body">
+                        @Html.DisplayFor(model => model.Create_Date)
+                    </div>
+
+                    <div class="body">
+                        <p>
+                            @{
+                                if (Model.Rating.HasValue)
+                                {
+
+                                    for (int i = 0; i < Model.Rating.Value; i++)
+                                    {
+                                        <div class="glyphicon glyphicon-star"></div>
+
+                                    }
+                                }
+                            }
+                        </p>
+                    </div>
+
+                    <div class="storyText">
+                        @Html.TextAreaFor(model => model.Story1)
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <p>
+        <a href="@Url.Action("Edit", "Stories", new { id = Model.ID })"><img class="editBtn" src="~/Img/Buttons/Edit.png" /></a>
+    </p>
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p style="color:white">Copyright &copy; Alexander Ivanov SaSu</p>
+            </div>
+        </div>
+    </footer>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/JS.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+</html>

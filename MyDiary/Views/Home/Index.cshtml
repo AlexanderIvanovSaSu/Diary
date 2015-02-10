@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "";
+}
+
+@Html.ActionLink("Home", "Index", "Home")
+
+<!DOCTYPE html>
+<head>
+    <title>Stories page</title>
+    <meta />
+    <link href="~/Content/CSS.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav id="pagesLinks">
+            <ul>
+                <li>
+                    <a href="Index" title="Home/Stories">Home</a>
+                    <a href="NewStories" title="New Stories">Add New Stories</a>
+                    <a href="AboutMe" title="About Me">About Me</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Story Diary</h1>
+        <div id="search-bar">
+            <input type="search" placeholder="search story" title="Search" />
+        </div>
+    </header>
+    <div id="body">
+        <div id="listStories">
+            <textarea></textarea>
+        </div>
+        <section id="showStories"></section>
+    </div>
+    <footer>Create by Alexander Ivanov</footer>
+
+</body>

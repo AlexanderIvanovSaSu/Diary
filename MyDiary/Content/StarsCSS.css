@@ -1,0 +1,61 @@
+﻿body {
+}
+
+span.ul {
+    position: absolute;
+    list-style-type: none;
+}
+
+.onestar {
+    position: relative;
+    content: url(../Img/1smiling-gold-star-gray.png);
+    height: 30px;
+    margin: 0px;
+    top: -50px;
+    left: 90px;
+}
+
+    .onestar:hover, .onestar:focus {
+        position: relative;
+        content: url(../Img/1smiling-gold-star.png);
+        height: 30px;
+        margin: 0px;
+        top: -50px;
+        left: 90px;
+    }
+
+.twostar {
+    position: relative;
+    content: url(../Img/2smiling-gold-star-gray.png);
+    height: 30px;
+    margin: 0px 60px;
+    top: -50px;
+    left: 90px;
+}
+
+    .twostar:hover, .twostar:focus {
+        position: relative;
+        content: url(../Img/2smiling-gold-star.png);
+        height: 30px;
+        margin: 0px 60px;
+        top: -50px;
+        left: 90px;
+    }
+
+.threestar {
+    position: relative;
+    content: url(../Img/3smiling-gold-star-gray.png);
+    height: 30px;
+    margin: 0px 120px;
+    top: -50px;
+    left: 105px;
+}
+
+    .threestar:hover, .threestar:focus {
+        position: relative;
+        content: url(../Img/3smiling-gold-star.png);
+        height: 30px;
+        margin: 0px 120px;
+        top: -50px;
+        left: 105px;
+    }

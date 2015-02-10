@@ -1,0 +1,220 @@
+﻿@model IEnumerable<MyDiary.Models.Story>
+
+@{
+    //Layout = "";
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/IndexCSS.css" rel="stylesheet" />
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />*@
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <a href="@Url.Action("Create")" class="plink"><img src='~/Img/Buttons/Create-gray.png' onmouseover='$(".plink img")[0].src = "../Img/Buttons/Create.png"' onmouseout="$('.plink img')[0].src = '../Img/Buttons/Create-gray.png'" /></a>
+    <a href="@Url.Action("AboutMe")" class="aboutme">AboutMe</a>
+    @*<button class="btn"> @Html.ActionLink("Create New", "Create")</button>*@
+
+    @using (Html.BeginForm("Index", "Stories", FormMethod.Get))
+    {
+        <p>
+            @*Genre: @Html.DropDownList("bookGenre", "All")*@
+            <span class="glyphicon glyphicon-search"></span>
+            <input placeholder="Search Story" type="search" id="SearchString" name="SearchString" />
+            <input type="submit" value="Filter" class="btn btn-default" placeholder="Search Story" />
+        </p>
+    }
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row carousel-holder">
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="~/Img/Diary/dear-diary.jpg" style="width:850px; height:350px;" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="~/Img/Diary/diary-note-pencil-ready-writing-26609284.jpg" style="width:850px; height:350px;" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="~/Img/Diary/Diary.jpg" style="width:850px; height:350px;" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="~/Img/Diary/Diary1878.jpg" style="width:850px; height:350px;" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="~/Img/Diary/The-Austerity-Diaries.jpg" style="width:850px; height:350px;" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+
+
+                        string formattedName = item.Story_Name;
+
+                        if (item.Story_Name.Length > 20)
+                        {
+                            formattedName = item.Story_Name.Substring(0, 17) + "...";
+                        }
+
+
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="@Url.Action("RenderPhoto", "Stories", new { imageId = item.ID })" class="story-img" />
+                                <div class="caption">
+                                    <h6 id="date" class="pull-right">@item.Create_Date.Value.ToString("dd/MM/yy")</h6><br />
+                                    <h4 class="story-name">
+                                        <text aria-valuemax="20"><a href="@Url.Action("Details", "Stories", new { id = item.ID })">@formattedName</a></text>
+                                    </h4>
+                                    <textarea>@Html.DisplayFor(modelItem => item.Story1)</textarea>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">
+                                        <a href="#" onclick="Confirmation(@item.ID)">
+                                            <img src="~/Img/Buttons/red-delete-button.png" style="width:30px;" id="btnDelete" />
+                                        </a>
+                                    </p>
+                                    <p>
+                                        @*<img src="@Url.Action("GetImage", "Stories", new { stars = item.Rating })" class="rating-img" />*@
+                                        @{
+                        if (item.Rating.HasValue)
+                        {
+
+                            for (int i = 0; i < item.Rating.Value; i++)
+                            {
+                                <div class="glyphicon glyphicon-star"></div>
+
+                            }
+                        }
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <form method="post" id="deleteForm">@Html.AntiForgeryToken()</form>
+                </div>
+            </div>
+            <!--Page navigation-->
+            <nav>
+                <ul class="pagination">
+                    @{
+                        if (ViewBag.pageNumber == 1)
+                        {
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            int prevPage = ViewBag.pageNumber -1;
+                            <li>
+                                <a href="http://localhost:49573/Stories/Index?page=@prevPage" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+                    }
+
+                    @{for (int i = 1; i < ViewBag.pages + 1; i++)
+                    {
+                        if (ViewBag.pageNumber == i)
+                        {
+                            <li><a href="http://localhost:49573/Stories/Index?page=@i" id="currentpage">@i</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="http://localhost:49573/Stories/Index?page=@i " id="elsepage">@i</a></li>
+                        }
+
+
+                    }
+                    }
+
+                    @{
+                        if (ViewBag.pageNumber == ViewBag.pages)
+                        {
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            int prevPage = ViewBag.pageNumber + 1;
+                            <li>
+                                <a href="http://localhost:49573/Stories/Index?page=@prevPage" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+
+            </nav>
+
+        </div>
+    </div>
+    <!-- /.container -->
+    <div class="container">
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="color:white">Copyright &copy; Alexander Ivanov SaSu</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

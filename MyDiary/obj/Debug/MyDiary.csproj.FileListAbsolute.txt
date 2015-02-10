@@ -1,0 +1,10 @@
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\MyDiary.dll.config
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\MyDiary.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\MyDiary.pdb
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\obj\Debug\MyDiary.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\obj\Debug\MyDiary.pdb
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\obj\Debug\MyDiary.csprojResolveAssemblyReference.cache
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\PagedList.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\PagedList.Mvc.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\PagedList.xml
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\MyDiary\bin\PagedList.Mvc.xml

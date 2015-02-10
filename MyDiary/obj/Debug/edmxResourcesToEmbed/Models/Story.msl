@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StoryDBModelStoreContainer" CdmEntityContainer="StoryDBEntities5">
+    <EntitySetMapping Name="Story">
+      <EntityTypeMapping TypeName="StoryDBModel.Story">
+        <MappingFragment StoreEntitySet="Story">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Story_Name" ColumnName="Story_Name" />
+          <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+          <ScalarProperty Name="Story1" ColumnName="Story" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

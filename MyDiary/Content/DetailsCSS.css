@@ -1,0 +1,66 @@
+﻿body {
+    background: url('../Img/IMG_8594.png') no-repeat center center fixed;
+    color: #1200ff;
+    font: 20px arial, verdana;
+}
+
+.container{
+    width:700px;
+    height:800px;
+    position:absolute;
+    margin: 0 300px;
+    border:1px thin black;
+    border-radius:10px;
+    box-shadow:0 0 30px #d500ff;
+    background-color:rgba(255, 255, 255,1);
+}
+
+/*.backbtn {
+    width:220px;
+    content:url(../Img/Buttons/BackButton-gray.png);
+}
+
+.backbtn:hover{
+    width:220px;
+    content:url(../Img/Buttons/BackButton-color.png);
+}*/
+
+.detailStory{
+    position:absolute;
+    margin:0 50px;
+    width:550px;
+    overflow:hidden;
+}
+
+.body{
+    width:100%;
+    margin:20px;
+}
+
+.story-img{
+    width:550px;
+}
+
+.editBtn{
+    width:150px;
+}
+
+.rating-img{
+    max-height:40px;
+}
+
+textarea{
+    width:550px;
+    height:150px;
+    overflow:hidden;
+    border:none;
+    background-color:rgba(255, 255, 255, 0.00);
+}
+
+textarea:focus{
+    width:900px;
+    height:400px;
+    overflow:hidden;
+    border:none;
+    background-color:rgba(255, 255, 255, 1);
+}

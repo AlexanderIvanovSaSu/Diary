@@ -1,0 +1,14 @@
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\Databases.dll.config
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\Databases.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\Databases.pdb
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\EntityFramework.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\EntityFramework.SqlServer.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\EntityFramework.xml
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\EntityFramework.SqlServer.xml
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\obj\Debug\Databases.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\obj\Debug\Databases.pdb
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\obj\Debug\Databases.csprojResolveAssemblyReference.cache
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\PagedList.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\PagedList.Mvc.dll
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\PagedList.xml
+D:\DOC\InfoStart\C#\ASP.Net\MyDiary\Databases\bin\Debug\PagedList.Mvc.xml

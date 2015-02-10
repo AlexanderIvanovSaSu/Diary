@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<head>
+    <title>New Sotires</title>
+    <meta />
+    <link href="~/Content/NewStoriesCSS.css" rel="stylesheet" />
+    <link href="~/Content/CSS.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav id="pagesLinks">
+            <ul>
+                <li>
+                    <a href="Index" title="Home/Stories">Home</a>
+                    <a href="NewStories" title="New Stories">Add New Stories</a>
+                    <a href="AboutMe" title="About Me">About Me</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form method="post">
+        <h1>Create New Sotry</h1>
+        <div id="additionalController">
+            Story name: <input type="text" title="Name of story" placeholder="Name of story" /><br />
+            Date of story: <input type="date" /><br />
+            Rate: <select>
+                <option>*</option>
+                <option>**</option>
+                <option>***</option>
+                <option>****</option>
+                <option>*****</option>
+                <option>******</option>
+            </select><br />
+            The story: <textarea style="width:300px; height:200px;"></textarea><br />
+            <input type="file" value="Image" placeholder="Select image" /><br />
+            <button type="submit" name="Create" value="Create">Create</button>
+            <button type="reset" name="Reset" value="Reset">Reset</button>
+        </div>
+    </form>
+</body>

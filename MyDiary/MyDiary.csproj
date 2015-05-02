@@ -147,6 +147,7 @@
     <Content Include="Img\Buttons\Create.png" />
     <Content Include="Img\Buttons\Details.png" />
     <Content Include="Img\Buttons\Edit.png" />
+    <Content Include="Img\Buttons\images.jpg" />
     <Content Include="Img\Buttons\JPG\BackButton-color.jpg" />
     <Content Include="Img\Buttons\JPG\BackButton-gray.jpg" />
     <Content Include="Img\Buttons\red-delete-button.png" />
@@ -274,6 +275,7 @@
     <Content Include="Content\bootstrap\badges.less" />
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\StyleSheet1.scss" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -18,9 +18,6 @@ namespace MyDiary.Controllers
 
         public ActionResult Index(string id, string searchString, int? page, int? itemsPerPage)
         {
-
-
-
             var story = from b in db.Story
                         select b;
 
@@ -28,8 +25,6 @@ namespace MyDiary.Controllers
             {
                 story = story.Where(s => s.Story_Name.Contains(searchString));
             }
-
-
 
             int pageSize = itemsPerPage ?? 6;
             int pageNumber = (page ?? 1);
@@ -48,11 +43,9 @@ namespace MyDiary.Controllers
             return View(pagableSource);
         }
 
-
         // GET: Stories/Details/5
         public ActionResult Details(int? id)
         {
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -81,8 +74,6 @@ namespace MyDiary.Controllers
             MemoryStream target = new MemoryStream();
             Image.InputStream.CopyTo(target);
             story.Image = target.ToArray();
-
-
             try
             {
                 if (ModelState.IsValid)
@@ -99,8 +90,6 @@ namespace MyDiary.Controllers
 
             return View(story);
         }
-
-
 
         // GET: Stories/Edit/5
         public ActionResult Edit(int? id)
